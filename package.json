@@ -17,7 +17,6 @@
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.12.8",
-    "@sentry/react-native": "^2.6.2",
     "apisauce": "^2.1.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
