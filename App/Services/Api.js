@@ -6,7 +6,7 @@ const headers = {
   'Content-Type': 'application/json'
 }
 
-const create = (baseURL = 'https://api.github.com/') => {
+const create = (baseURL = 'http://3.15.16.42:7000/') => {
   // ------
   // STEP 1
   // ------
@@ -38,6 +38,7 @@ const create = (baseURL = 'https://api.github.com/') => {
   const getRoot = () => api.get('')
   const getRate = () => api.get('rate_limit')
   const getUser = (username) => api.get('search/users', {q: username})
+  const getFoods = () => api.get('foods')
 
   // ------
   // STEP 3
@@ -56,7 +57,7 @@ const create = (baseURL = 'https://api.github.com/') => {
     getRoot,
     getRate,
     getUser,
-
+    getFoods,
     api
   }
 }

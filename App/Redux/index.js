@@ -6,7 +6,8 @@ import ReduxPersist from '@Config/ReduxPersist'
 
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
-  staticData: require('./StaticDataRedux').reducer
+  staticData: require('./StaticDataRedux').reducer,
+  foods: require('./FoodsRedux').reducer
 })
 
 export default () => {

@@ -6,10 +6,12 @@ import DebugConfig from '@Config/DebugConfig'
 /* ------------- Types ------------- */
 import { StartupTypes } from '@Redux/StartupRedux'
 import { StaticDataTypes } from '@Redux/StaticDataRedux'
+import { FoodsTypes } from '@Redux/FoodsRedux'
 
 /* ------------- Sagas ------------- */
 import { startup } from './StartupSagas'
 import { getRoot } from './StaticDataSagas'
+import { getFoods } from './FoodsSagas'
 
 /* ------------- API ------------- */
 // The API we use is only used from Sagas, so we create it here and pass along
@@ -22,6 +24,8 @@ export default function * root () {
     // some sagas only receive an action
     takeLatest(StartupTypes.STARTUP, startup),
 
-    takeLatest(StaticDataTypes.GET_ROOT_REQUEST, getRoot, api)
+    takeLatest(StaticDataTypes.GET_ROOT_REQUEST, getRoot, api),
+
+    takeLatest(FoodsTypes.FOODS_REQUEST, getFoods, api)
   ])
 }

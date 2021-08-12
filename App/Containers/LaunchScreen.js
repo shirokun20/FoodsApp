@@ -31,7 +31,7 @@ let routeKeHome = (finished, props) => {
       index: 0,
       routes: [
         {
-          name: "WelcomeScreen",
+          name: "ListFoods",
         },
       ],
     });
