@@ -50,7 +50,7 @@ const FoodDetailDesc = (params) => {
     }}>
       <Animated.Text style={[apply("mx-2 mt-3 font-bold text/4.4"), {
         opacity,
-      }]}>Cara membuat:</Animated.Text>
+      }]}>Bahan bahan untuk membuat:</Animated.Text>
       <View style={apply("mb-2 mt-1 bg-white")}>
         <FoodListContainerItems>
           <Animated.Text style={[apply("mx-2 text/5"), {

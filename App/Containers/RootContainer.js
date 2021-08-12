@@ -5,7 +5,7 @@ import StartupActions from '@Redux/StartupRedux'
 import ReduxPersist from '@Config/ReduxPersist'
 import AppNavigation from '@Navigation/AppNavigation'
 import { SafeAreaView } from 'react-native-safe-area-context'
-
+// import * as Sentry from "@sentry/react-native";
 // styles
 import { apply } from '@Themes/OsmiProvider'
 
@@ -14,6 +14,10 @@ const RootContainer = (props) => {
     if (!ReduxPersist.active) {
       props.startup()
     }
+
+    // Sentry.init({
+    //   dsn: "https://8f024f742cf74d4aa740731d6fb24ce6@o954846.ingest.sentry.io/5904070",
+    // }); 
   }, [])
 
   return (

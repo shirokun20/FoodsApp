@@ -20,7 +20,7 @@ const FoodDetailHeader = ({
       </TouchableOpacity>
       <View style={apply("flex")}>
         <Text style={styles.textTitle}>
-          Detail Food
+          Detail Makanan
         </Text>
         <Text style={styles.textSubTitle}>{name}</Text>
       </View>

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '@Redux/YourRedux'
-import { FlatList, RefreshControl, StatusBar, View } from "react-native";
+import { FlatList, RefreshControl, StatusBar, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Icon from "react-native-vector-icons/dist/Ionicons";
 // Styles
 import styles from "../Styles/Foods/ListFoodStyle";
 import { apply } from "@Themes/OsmiProvider";
@@ -14,6 +15,7 @@ import FoodListContainerItems from "@Components/FoodListContainerItems";
 import FoodsActions from "@Redux/FoodsRedux";
 import FoodListLoading from "@Components/FoodListLoading";
 import FoodItem from "@Components/FoodItem";
+
 
 const ListFood = (props) => {
   const { foods } = props;
@@ -51,7 +53,7 @@ const ListFood = (props) => {
                 index={index}
                 onItemPress={() => {
                   // console.log(item);
-                  props.navigation.navigate('DetailFood', {
+                  props.navigation.navigate("DetailFood", {
                     ...item,
                   });
                 }}
@@ -66,8 +68,12 @@ const ListFood = (props) => {
               />
             }
             ListEmptyComponent={() => (
-              <View>
-                <Text>Tidak ada data ditampilkan</Text>
+              <View style={apply('flex h/80 justify-center items-center')}>
+                <Icon 
+                  name="md-fast-food-sharp"
+                  style={apply('text/20 text-gray-800')}
+                />
+                <Text style={apply('text/3 text-gray-800 font-bold text-center')}>Tidak ada makanan{'\n'}yang ditampilkan</Text>
               </View>
             )}
           />

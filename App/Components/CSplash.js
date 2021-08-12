@@ -4,10 +4,8 @@ import { View, Text } from "react-native";
 import Icon from "react-native-vector-icons/dist/Ionicons";
 import { appName, version } from "../../package.json";
 import Animated, {
-  decay,
   Easing,
   Extrapolate,
-  spring,
   timing,
   Value,
 } from "react-native-reanimated";
@@ -133,7 +131,7 @@ const CSplash = ({
                 }
               ],
             },
-            apply("text-white font-bold text/5.5"),
+            apply("text-white font-bold text/3"),
           ]}
         >
           {appName.toUpperCase()}

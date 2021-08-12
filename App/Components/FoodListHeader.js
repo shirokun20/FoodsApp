@@ -9,7 +9,7 @@ import { apply } from '@Themes/OsmiProvider'
 const FoodListHeader = props => {
   return (
     <View style={styles.container}>
-      <Text style={styles.textHeader}>List Foods</Text>
+      <Text style={styles.textHeader}>Daftar Makanan</Text>
     </View>
   )
 }
