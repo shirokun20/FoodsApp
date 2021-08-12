@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LaunchScreen from "@Containers/LaunchScreen";
 import ListFood from "@Containers/Foods/ListFood";
+import DetailFood from "@Containers/Foods/DetailFood";
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,11 @@ const AppNavigation = () => {
         <Stack.Screen
           name="ListFoods"
           component={ListFood}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="DetailFood"
+          component={DetailFood}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

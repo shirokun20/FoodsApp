@@ -50,7 +50,10 @@ const ListFood = (props) => {
                 item={item}
                 index={index}
                 onItemPress={() => {
-                  console.log(item);
+                  // console.log(item);
+                  props.navigation.navigate('DetailFood', {
+                    ...item,
+                  });
                 }}
               />
             )}
